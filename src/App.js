@@ -30,7 +30,7 @@ export default function App() {
   }, []);
 
   return (
-    <div>      
+    <>      
       {loading && 
         <div>A moment please...</div>
       }
@@ -40,6 +40,6 @@ export default function App() {
       <ul>
         <ArticleList articles={articles}/>                  
       </ul>
-    </div>
+    </>
   );
 }
