@@ -1,8 +1,6 @@
 import { useState, useEffect } from "react";
 import axios from "axios";
 
-import Article from "./components/Article";
-
 import ArticleList from "./components/ArticleList";
 
 export default function App() {
