@@ -10,7 +10,7 @@ export default function ArticleList({articles}) {
       imageUrl={article.urlToImage}
       title={article.title}
       description={article.description}   
-      source={article.source.name}           
+      source={article.source}           
     />      
   ));
   

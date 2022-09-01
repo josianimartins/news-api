@@ -30,9 +30,12 @@ export const ArticleContent = styled.div`
   h2 {
     font-weight: 600;
     font-size: 22px;  
-    min-height: 160px;
     align-self: start;
     text-decoration: none;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;  
+    overflow: hidden;
   }
 
   p {

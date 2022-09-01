@@ -14,7 +14,7 @@ export default function Article(props) {
       <ArticleContent className='article-content'>
         <h2>{props.title}</h2>
         <p>{props.description}</p>
-        <span>{props.source}</span>
+        <span>{props.source.name}</span>
       </ArticleContent>                       
     </ArticleContainer>
   );
@@ -25,4 +25,5 @@ Article.propTypes = {
   imageUrl: PropTypes.string,
   title: PropTypes.string.isRequired,
   description: PropTypes.string,
+  source: PropTypes.string,
 }
