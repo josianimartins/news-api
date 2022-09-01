@@ -5,6 +5,7 @@ export default function Article(props) {
   return (
     <ArticleContainer 
       href={props.url}
+      target="_blank"
     >
       <ArticleImage 
         className='article-image' 
