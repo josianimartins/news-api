@@ -1,6 +1,8 @@
 import { useState, useEffect } from "react";
 import axios from "axios";
+import { Reset } from "styled-reset";
 
+import { GlobalStyle } from "./GlobalStyle";
 import ArticleList from "./components/ArticleList";
 
 export default function App() {
@@ -31,6 +33,8 @@ export default function App() {
 
   return (
     <>      
+      <Reset />
+      <GlobalStyle/>
       {loading && 
         <div>A moment please...</div>
       }

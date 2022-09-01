@@ -1,22 +1,27 @@
 import PropTypes from 'prop-types';
+
+import { ArticleContainer, ArticleImage, ArticleContent } from './styles';
 export default function Article(props) {
   return (
-    <li key={props.publishedAt}>
-      <img 
-        src={props.imageUrl} 
-        alt={props.title}
-        style={{maxWidth: '200px'}}
-      />                
-      <h3>{props.title}</h3>
-      <small>{props.publishedAt}</small>
-      <p>{props.description}</p>
-    </li>
+    <ArticleContainer 
+      href={props.url}
+    >
+      <ArticleImage 
+        className='article-image' 
+        style={{backgroundImage: `url(${props.imageUrl})`}}>
+      </ArticleImage>   
+      <ArticleContent className='article-content'>
+        <h2>{props.title}</h2>
+        <p>{props.description}</p>
+        <span>{props.source}</span>
+      </ArticleContent>                       
+    </ArticleContainer>
   );
 }
 
 Article.propTypes = {
-  imageUrl: PropTypes.string.isRequired,
+  url: PropTypes.string.isRequired,
+  imageUrl: PropTypes.string,
   title: PropTypes.string.isRequired,
-  publishedAt: PropTypes.string.isRequired,
-  description: PropTypes.string.isRequired,
+  description: PropTypes.string,
 }

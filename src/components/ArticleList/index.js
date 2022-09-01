@@ -1,22 +1,23 @@
 import PropTypes from 'prop-types';
 
+import { ArticleListContainer } from './styles';
 import Article from "../Article";
 export default function ArticleList({articles}) {
 
   const listArticles = articles.map((article) => (
     <Article
-      key={article.publishedAt}
+      url={article.url}
       imageUrl={article.urlToImage}
       title={article.title}
-      publishedAt={article.publishedAt}
-      description={article.description}              
+      description={article.description}   
+      source={article.source.name}           
     />      
   ));
   
   return (
-    <ul>
+    <ArticleListContainer>
       {listArticles}
-    </ul>
+    </ArticleListContainer>
   );
 }
 
